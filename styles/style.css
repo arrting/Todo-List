@@ -139,7 +139,6 @@ div.sort button {
 }
 @media screen and (max-width: 900px) {
   section div.todo {
-    border: 1px solid red;
     width: 60vw;
   }
   section div.todo p.todo-time {
