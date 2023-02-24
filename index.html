@@ -8,7 +8,13 @@
     <meta name="author" content="Arrting" />
     <meta name="description" content="代辦清單" />
     <meta name="robots" content="index,follow" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
@@ -17,12 +23,13 @@
     </header>
 
     <form>
-      <input type="text" />
+      <input type="text" required />
       <input type="number" min="1" max="12" placeholder="M" required />
       <input type="number" min="1" max="31" placeholder="D" required />
       <button type="submit">Add Into List</button>
     </form>
-
+    <br />
+    <br />
     <div class="sort">
       <button>Sort By Time</button>
     </div>
