@@ -92,64 +92,6 @@ add.addEventListener("click", e =>{
     section.appendChild(todo);
 });
 
-
-// let myList = localStorage.getItem("list");
-// if(myList != null){
-//     let myListArray = JSON.parse(myList); //array
-//     myListArray.forEach(item => {
-        
-//         //create a todo
-//         let todo = document.createElement("div");
-//         todo.classList.add("todo")
-//         let text = document.createElement("p");
-//         text.classList.add("todo-text");
-//         text.innerText = item.todoText;
-//         let time = document.createElement("p");
-//         time.classList.add("todo-time");
-//         time.innerText = item.todoMonth+" / "+item.todoDate;
-//         todo.appendChild(text);
-//         todo.appendChild(time);
-
-//       //create check aind trash can
-//         let completeButton = document.createElement("button");
-//         completeButton.classList.add("complete");
-//         completeButton.innerHTML = '<i class="fa-solid fa-check"></i>';
-//         completeButton.addEventListener("click" ,e => {
-//             let todoItem = e.target.parentElement;
-//             todoItem.classList.toggle("done");
-//             //console.log();
-//         });
-        
-//         //trash
-//         let trashButton = document.createElement("button");
-//         trashButton.classList.add("trash");
-//         trashButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
-//         trashButton.addEventListener("click" ,e => {
-//             let todoItem = e.target.parentElement;
-            
-//             //移除item
-//             todoItem.addEventListener("animationend",() =>{
-//                 //remove from local storage
-//                 let text = todoItem.children[0].innerText;
-//                 let myListArray = JSON.parse(localStorage.getItem("list"));
-//                 myListArray.forEach( (item ,index) => {
-//                     if(item.todoText == text){
-//                         myListArray.splice(index,1);
-//                         localStorage.setItem("list", JSON.stringify(myListArray));
-//                     }
-//                 })
-//                 todoItem.remove();
-//              });
-//             todoItem.style.animation = "scaleDown 0.5s forwards";
-//         //todoItem.remove();  //錯的
-//         //console.log(todoItem);
-//         });
-//         todo.appendChild(completeButton);
-//         todo.appendChild(trashButton);
-
-//         section.appendChild(todo);
-//     });
-// }
 loadData();
 
 function loadData() {
@@ -277,3 +219,63 @@ sortButton.addEventListener("click", () => {
   // load data
   loadData();
 })
+
+
+
+// let myList = localStorage.getItem("list");
+// if(myList != null){
+//     let myListArray = JSON.parse(myList); //array
+//     myListArray.forEach(item => {
+        
+//         //create a todo
+//         let todo = document.createElement("div");
+//         todo.classList.add("todo")
+//         let text = document.createElement("p");
+//         text.classList.add("todo-text");
+//         text.innerText = item.todoText;
+//         let time = document.createElement("p");
+//         time.classList.add("todo-time");
+//         time.innerText = item.todoMonth+" / "+item.todoDate;
+//         todo.appendChild(text);
+//         todo.appendChild(time);
+
+//       //create check aind trash can
+//         let completeButton = document.createElement("button");
+//         completeButton.classList.add("complete");
+//         completeButton.innerHTML = '<i class="fa-solid fa-check"></i>';
+//         completeButton.addEventListener("click" ,e => {
+//             let todoItem = e.target.parentElement;
+//             todoItem.classList.toggle("done");
+//             //console.log();
+//         });
+        
+//         //trash
+//         let trashButton = document.createElement("button");
+//         trashButton.classList.add("trash");
+//         trashButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+//         trashButton.addEventListener("click" ,e => {
+//             let todoItem = e.target.parentElement;
+            
+//             //移除item
+//             todoItem.addEventListener("animationend",() =>{
+//                 //remove from local storage
+//                 let text = todoItem.children[0].innerText;
+//                 let myListArray = JSON.parse(localStorage.getItem("list"));
+//                 myListArray.forEach( (item ,index) => {
+//                     if(item.todoText == text){
+//                         myListArray.splice(index,1);
+//                         localStorage.setItem("list", JSON.stringify(myListArray));
+//                     }
+//                 })
+//                 todoItem.remove();
+//              });
+//             todoItem.style.animation = "scaleDown 0.5s forwards";
+//         //todoItem.remove();  //錯的
+//         //console.log(todoItem);
+//         });
+//         todo.appendChild(completeButton);
+//         todo.appendChild(trashButton);
+
+//         section.appendChild(todo);
+//     });
+// }
